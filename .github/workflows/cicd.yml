@@ -9,7 +9,7 @@ on:
     branches:
       - main
 jobs:
-  build and test:
+  build_and_test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -29,8 +29,8 @@ jobs:
         run: |
           pytest 
 
-  build and publish:
-    needs: build and test
+  build_and_publish:
+    needs: build_and_test
     runs-on: ubuntu-latest
 
     steps:
